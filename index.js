@@ -215,9 +215,23 @@ gradeCalc(40);
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
-// Hint - you may need to study tomorrow's traning kit on arrays 
-// try looking up the .includes() method
 
+function checkVowels () {
+
+    let word = prompt('Please type a word')
+    word = [...word.toUpperCase()]
+
+    let vowels = [];
+
+    for (i = 0; i <= word.length; i++) {
+        if (word[i] === 'A' || word[i] === 'E' || word[i] === 'I' || word[i] === 'O' || word[i] === 'U'){
+            vowels.push(i.length)
+        }
+    }
+    console.log(`There are ${vowels.length} vowels in the chosen word`)
+}
+
+checkVowels()
 
 
 
