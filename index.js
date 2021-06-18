@@ -98,7 +98,8 @@ dogFeeder(1,15);
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-function game (choice) {
+function game () {
+let choice = prompt('Please choose');
 
 let rndInt = Math.floor(Math.random() * 3) + 1
 
@@ -110,48 +111,50 @@ if (rndInt === 1) {
     rndInt = 'sissors';
 }
 
-//console.log(rndInt);
+console.log(choice)
 
-if (choice = 'rock' && rndInt === 'rock'){
+if (choice === 'rock' && rndInt === 'rock'){
     console.log('You chose rock!');
     console.log('CPU chose' + rndInt);
     console.log(`Tie, rock vs rock!`);
-}else if (choice = 'rock' && rndInt === 'paper') {
+}else if (choice === 'rock' && rndInt === 'paper') {
     console.log('You chose rock!');
     console.log('CPU chose' + rndInt);
     console.log(`You lose, paper beats rock!`);
-}else if (choice = 'rock' && rndInt === 'sissors') {
+}else if (choice === 'rock' && rndInt === 'sissors') {
     console.log('You chose rock!');
     console.log('CPU chose' + rndInt);
     console.log(`You win, rock beats siccors!`);
-}else if (choice = 'paper' && rndInt === 'paper'){
+}else if (choice === 'paper' && rndInt === 'paper'){
     console.log('You chose paper!');
     console.log('CPU chose' + rndInt);
     console.log(`Tie, paper vs paper!`);
-}else if (choice = 'paper' && rndInt === 'sissors') {
+}else if (choice === 'paper' && rndInt === 'sissors') {
     console.log('You chose paper!');
     console.log('CPU chose' + rndInt);
     console.log(`You lose, sissors beats paper`);
-}else if (choice = 'paper' && rndInt === 'rock') {
+}else if (choice === 'paper' && rndInt === 'rock') {
     console.log('You chose paper!');
     console.log('CPU chose' + rndInt);
     console.log(`You win, paper beats rock!`);
-}else if (choice = 'sissors' && rndInt === 'sissors'){
+}else if (choice === 'sissors' && rndInt === 'sissors'){
     console.log('You chose sissors!');
     console.log('CPU chose' + rndInt);
     console.log(`Tie, sissors vs sissors!`);
-}else if (choice = 'sissors' && rndInt === 'rock') {
+}else if (choice === 'sissors' && rndInt === 'rock') {
     console.log('You chose sissors!');
     console.log('CPU chose' + rndInt);
-    console.log(`You lose, paper beats sissors!`);
-}else if (choice = 'sissors' && rndInt === 'paper') {
+    console.log(`You lose, rock beats sissors!`);
+}else if (choice === 'sissors' && rndInt === 'paper') {
     console.log('You chose sissors!');
     console.log('CPU chose' + rndInt);
     console.log(`You win, sissors beats siccors!`);
+}else if (choice !== 'rock' || choice !== 'paper' || choice !== 'sissors') {
+    alert('Error: please only choose rock, paper or siscors');
 }
 
 }
-game('rock');
+game();
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
